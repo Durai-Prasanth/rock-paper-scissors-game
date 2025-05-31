@@ -5,34 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rock Paper Scissors</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
+    /* Sample Modern Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.game-container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 500px;
+}
 
-    #result {
-      margin-top: 20px;
-      font-size: 20px;
-      font-weight: bold;
-    }
+.choice {
+  margin: 10px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  background: #c1c1c1;
+}
+
+.choice:hover {
+  background-color: #858585;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
   </style>
 </head>
 <body>
-  <h1>🪨 📄 ✂️ Rock Paper Scissors</h1>
-
-  <button onclick="play('rock')">Rock</button>
-  <button onclick="play('paper')">Paper</button>
-  <button onclick="play('scissors')">Scissors</button>
-
-  <div id="result"></div>
+<div class="game-container">
+  <h1>Rock Paper Scissors ✊🖐️✌️</h1>
+<div class="buttons">
+  <button class="choice" data-choice="rock" onclick="play('rock')">Rock</button>
+  <button class="choice" data-choice="paper" onclick="play('paper')">Paper</button>
+  <button class="choice" data-choice="scissors" onclick="play('scissors')">Scissors</button>
+</div>
+<p class="result" id="result"></p>
+  </div>
 
   <script>
     function play(userChoice) {
